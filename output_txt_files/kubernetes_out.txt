@@ -1,0 +1,64 @@
+:udacity-project4 thudinh$ ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "udacity-microservices" already exists
+NAME                    READY   STATUS    RESTARTS   AGE
+udacity-microservices   1/1     Running   0          6m25s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+#----LOGS-----#
+
+:udacity-project4 thudinh$ kubectl logs udacity-microservices
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-516-115
+[2022-08-13 03:16:54,816] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-08-13 03:16:54,852] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:16:54,863] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:16:54,870] INFO in app: Prediction:
+[20.35373177134412]
+127.0.0.1 - - [13/Aug/2022 03:16:54] "POST /predict HTTP/1.1" 200 -
+[2022-08-13 03:18:45,490] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-08-13 03:18:45,507] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:18:45,517] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:18:45,521] INFO in app: Prediction:
+[20.35373177134412]
+127.0.0.1 - - [13/Aug/2022 03:18:45] "POST /predict HTTP/1.1" 200 -
+[2022-08-13 03:19:05,959] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-08-13 03:19:05,977] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:19:05,986] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:19:05,989] INFO in app: Prediction:
+[20.35373177134412]
+127.0.0.1 - - [13/Aug/2022 03:19:05] "POST /predict HTTP/1.1" 200 -
+[2022-08-13 03:20:10,328] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-08-13 03:20:10,344] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:20:10,356] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-13 03:20:10,360] INFO in app: Prediction:
+[20.35373177134412]
+127.0.0.1 - - [13/Aug/2022 03:20:10] "POST /predict HTTP/1.1" 200 -
